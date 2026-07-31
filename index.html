@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Cities — walkable cities built from real geospatial data</title>
-<meta name="description" content="Four browser-walkable cities built from real elevation and building data, as a way of probing what a model does when it is confidently wrong.">
+<meta name="description" content="Four cities you can walk around in a browser, built from real geospatial data — small worlds simulated by frontier models.">
 <style>
   :root { color-scheme: dark; }
   * { box-sizing: border-box; }
@@ -36,41 +36,47 @@
 <body>
 <main>
   <h1>Cities</h1>
-  <p class="sub">Four cities you can walk around in a browser, built from real geospatial data — and the reason I keep building them.</p>
+  <p class="sub">Four cities you can walk around in a browser, built from real geospatial data — and why I keep making them.</p>
 
   <h2>Why</h2>
-  <p>What I actually learn from tasks like these isn't whether the model can write Three.js. It's this: given data nobody has memorised, does it notice when it's confidently wrong?</p>
+  <p>I have always been interested in simulating worlds. Whether it's a fantasy tabletop RPG or a 3D simulation, I find it fascinating to think through how a world, a society, an ecosystem would actually work under its own rules.</p>
 
-  <p>A concrete example. The roofs in San Lorenzo were floating in mid-air over some buildings, and the model's own automated check was reporting green. The check measured the vertices of each roof triangle, and every vertex did sit inside the building's footprint. But on an L-shaped plan the triangle surfaces crossed the courtyard between the two wings. Worst case: 17.8 m of roof hanging over nothing, with the test passing. The fix wasn't the geometry, it was changing what got measured: centroids and edge midpoints, not corners. Then the number moved from 17.8 m to 2.4 m, which is the width of the eaves.</p>
+  <p>Lately, one of my favourite ways to test what a new frontier model can do is to hand it exactly that: build me a world. Not a toy scene — a real place, with real terrain and real buildings, and people in it who have somewhere to be.</p>
 
-  <blockquote>That's the interesting capability to me. Not writing the code, but instrumenting your own work so the mistake becomes visible, and noticing when your own metric is lying to you.</blockquote>
+  <p>It started with my home town. I took geospatial data for San Lorenzo de El Escorial and asked Claude to put it back the way it stood around 1570, then wrapped a medieval RPG quest system around the Monastery. Real elevation, real footprints, imaginary century.</p>
+
+  <p>Those learnings went straight into the next one: Edo, the shogun's capital, built on the same ground modern Tokyo sits on. And while I was there, I got curious how far the modern city would go — so Tokyo became its own build, at night, at real heights, with real Japanese addresses.</p>
+
+  <p>Then I wondered how Codex would handle the same brief, and asked it for Panama City. It did — in a noticeably different flavour.</p>
+
+  <blockquote>These are not perfect representations. They're full of inconsistencies and bugs. What I find interesting is watching these models take real data and spin a society out of it — small worlds, simulated well enough to walk through.</blockquote>
 
   <h2>The cities</h2>
   <ul class="cities">
     <li>
-      <a class="city-name" href="https://cads.github.io/san-lorenzo-1570/">San Lorenzo, 1570</a><span class="built">Claude</span>
-      <span class="desc">San Lorenzo de El Escorial hacia 1570, jugable en el navegador.</span>
+      <a class="city-name" href="https://cads.github.io/san-lorenzo-1570/web/">San Lorenzo, 1570</a><span class="built">Claude</span>
+      <span class="desc">My home town as it stood around 1570, with a medieval quest system built around the Monastery of San Lorenzo de El Escorial. Where all of this started.</span>
       <a class="src" href="https://github.com/CaDs/san-lorenzo-1570">source →</a>
     </li>
     <li>
-      <a class="city-name" href="https://cads.github.io/edo/">Edo</a><span class="built">Claude</span>
-      <span class="desc">A walk through Tokyo as the shogun's capital — real GSI terrain and OSM footprints, dressed as Edo.</span>
+      <a class="city-name" href="https://cads.github.io/edo/web/">Edo</a><span class="built">Claude</span>
+      <span class="desc">The same ground Tokyo sits on, rolled back to the shogun's capital. Real GSI terrain and OSM footprints, dressed as Edo.</span>
       <a class="src" href="https://github.com/CaDs/edo">source →</a>
     </li>
     <li>
-      <a class="city-name" href="https://cads.github.io/tokyo/">Tokyo</a><span class="built">Claude</span>
-      <span class="desc">The Greater Tokyo metropolitan area after dark. Real GSI elevation, real OSM buildings at real heights, live Japanese addresses. No bundler, no textures, no audio files.</span>
+      <a class="city-name" href="https://cads.github.io/tokyo/web/">Tokyo</a><span class="built">Claude</span>
+      <span class="desc">How much of the modern city can you actually simulate? Greater Tokyo after dark — real elevation, real buildings at real heights, live Japanese addresses. No bundler, no textures, no audio files.</span>
       <a class="src" href="https://github.com/CaDs/tokyo">source →</a>
     </li>
     <li>
-      <a class="city-name" href="https://cads.github.io/panama/">Panama City</a><span class="built">Codex</span>
-      <span class="desc">A playable modern replica of Panama City built from real geospatial data, with NPCs and quests.</span>
+      <a class="city-name" href="https://cads.github.io/panama/web/">Panama City</a><span class="built">Codex</span>
+      <span class="desc">The same brief, handed to a different model. A playable modern Panama City with NPCs and quests — and a distinctly different flavour.</span>
       <a class="src" href="https://github.com/CaDs/panama">source →</a>
     </li>
   </ul>
 
   <h2>What this is not</h2>
-  <p>This is not a benchmark. n=1 per model, my prompting differs between runs, and these artifacts are as much a record of my nudging as of any model's ability. Which is exactly why they're public. Go and walk around in them, and judge for yourself.</p>
+  <p>This is not a benchmark. One build per model, my prompting drifts between runs, and each of these is as much a record of my nudging as of any model's ability. Which is exactly why they're public — go walk around in them and judge for yourself.</p>
 
   <footer>By <a href="https://github.com/CaDs">Carlos Donderis</a>. San Lorenzo, Edo and Tokyo were built with Claude; Panama with Codex.</footer>
 </main>
