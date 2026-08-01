@@ -1,6 +1,6 @@
 # Cities
 
-Four cities you can walk around in a browser, built from real geospatial data — and why I keep making them.
+Five cities you can walk around in a browser, built from real geospatial data — and why I keep making them.
 
 ## Why
 
@@ -12,7 +12,7 @@ It started with my home town. I took geospatial data for San Lorenzo de El Escor
 
 Those learnings went straight into the next one: Edo, the shogun's capital, built on the same ground modern Tokyo sits on. And while I was there, I got curious how far the modern city would go — so Tokyo became its own build, at night, at real heights, with real Japanese addresses.
 
-Then I wondered how Codex would handle the same brief, and asked it for Panama City. It did — in a noticeably different flavour.
+Then I wondered how Codex would handle the same brief, and asked it for Panama City. It did — in a noticeably different flavour. And when Ornith arrived I gave it the hardest of the Japanese briefs: Kyoto, where the ground is a basin instead of a plain and the city is temples rather than a castle town.
 
 > These are not perfect representations. They're full of inconsistencies and bugs. What I find interesting is watching these models take real data and spin a society out of it — small worlds, simulated well enough to walk through.
 
@@ -24,6 +24,7 @@ Then I wondered how Codex would handle the same brief, and asked it for Panama C
 | **Edo** — the same ground Tokyo sits on, rolled back to the shogun's capital. Real GSI terrain and OSM footprints, dressed as Edo. | Claude | [open](https://cads.github.io/edo/web/) | [repo](https://github.com/CaDs/edo) |
 | **Tokyo** — how much of the modern city can you actually simulate? Greater Tokyo after dark, real elevation, real buildings at real heights, live Japanese addresses. | Claude | [open](https://cads.github.io/tokyo/web/) | [repo](https://github.com/CaDs/tokyo) |
 | **Panama City** — the same brief, handed to a different model. A playable modern Panama City with NPCs and quests. | Codex | [open](https://cads.github.io/panama/web/) | [repo](https://github.com/CaDs/panama) |
+| **Kyoto** — the imperial capital in the Edo period. The Kamo River corridor climbing into the Higashiyama hills, Nijo Castle on its real moats, errands built from the place names that survived the century. | Ornith | [open](https://cads.github.io/kyoto/web/) | [repo](https://github.com/CaDs/kyoto) |
 
 ## What this is not
 

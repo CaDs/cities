@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Cities — walkable cities built from real geospatial data</title>
-<meta name="description" content="Four cities you can walk around in a browser, built from real geospatial data — small worlds simulated by frontier models.">
+<meta name="description" content="Five cities you can walk around in a browser, built from real geospatial data — small worlds simulated by frontier models.">
 <style>
   :root { color-scheme: dark; }
   * { box-sizing: border-box; }
@@ -36,7 +36,7 @@
 <body>
 <main>
   <h1>Cities</h1>
-  <p class="sub">Four cities you can walk around in a browser, built from real geospatial data — and why I keep making them.</p>
+  <p class="sub">Five cities you can walk around in a browser, built from real geospatial data — and why I keep making them.</p>
 
   <h2>Why</h2>
   <p>I have always been interested in simulating worlds. Whether it's a fantasy tabletop RPG or a 3D simulation, I find it fascinating to think through how a world, a society, an ecosystem would actually work under its own rules.</p>
@@ -47,7 +47,7 @@
 
   <p>Those learnings went straight into the next one: Edo, the shogun's capital, built on the same ground modern Tokyo sits on. And while I was there, I got curious how far the modern city would go — so Tokyo became its own build, at night, at real heights, with real Japanese addresses.</p>
 
-  <p>Then I wondered how Codex would handle the same brief, and asked it for Panama City. It did — in a noticeably different flavour.</p>
+  <p>Then I wondered how Codex would handle the same brief, and asked it for Panama City. It did — in a noticeably different flavour. And when Ornith arrived I gave it the hardest of the Japanese briefs: Kyoto, where the ground is a basin instead of a plain and the city is temples rather than a castle town.</p>
 
   <blockquote>These are not perfect representations. They're full of inconsistencies and bugs. What I find interesting is watching these models take real data and spin a society out of it — small worlds, simulated well enough to walk through.</blockquote>
 
@@ -73,12 +73,17 @@
       <span class="desc">The same brief, handed to a different model. A playable modern Panama City with NPCs and quests — and a distinctly different flavour.</span>
       <a class="src" href="https://github.com/CaDs/panama">source →</a>
     </li>
+    <li>
+      <a class="city-name" href="https://cads.github.io/kyoto/web/">Kyoto</a><span class="built">Ornith</span>
+      <span class="desc">The imperial capital in the Edo period, in a basin instead of on a plain — the Kamo River corridor climbing into the Higashiyama hills, Nijo Castle on its real moats, and errands built from the place names that survived the century.</span>
+      <a class="src" href="https://github.com/CaDs/kyoto">source →</a>
+    </li>
   </ul>
 
   <h2>What this is not</h2>
   <p>This is not a benchmark. One build per model, my prompting drifts between runs, and each of these is as much a record of my nudging as of any model's ability. Which is exactly why they're public — go walk around in them and judge for yourself.</p>
 
-  <footer>By <a href="https://github.com/CaDs">Carlos Donderis</a>. San Lorenzo, Edo and Tokyo were built with Claude; Panama with Codex.</footer>
+  <footer>By <a href="https://github.com/CaDs">Carlos Donderis</a>. San Lorenzo, Edo and Tokyo were built with Claude; Panama with Codex; Kyoto with Ornith.</footer>
 </main>
 </body>
 </html>
